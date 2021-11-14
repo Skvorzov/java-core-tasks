@@ -8,7 +8,18 @@ public class ArrayBalance {
      * other side.
      */
     public boolean canBalance(int[] array) {
+        int sum1 = 0;
+        int sum2 = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum1 += array[i];
+        }
+        for (int i = 0; i < array.length; i++) {
+            sum2 += array[i];
+            sum1 -= array[i];
+            if (sum2 == sum1) {
+                return true;
+            }
+        }
         return false;
     }
-
 }

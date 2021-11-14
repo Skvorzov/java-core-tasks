@@ -6,7 +6,16 @@ public class Factorial {
      * Реализуйте метод getFactorial(int number) который вовзращает факториал числа.
      */
     public int getFactorial(int number) {
-        return -1;
+        int[] arr = new int[number];
+        int num = 1;
+        int sum = 1;
+        for (int i = 0; i < arr.length ; i++) {
+            arr[i] = num;
+            num++;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum * arr[i];
+        }
+        return sum;
     }
-
 }
