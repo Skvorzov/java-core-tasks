@@ -12,8 +12,6 @@ public class Factorial {
         for (int i = 0; i < arr.length ; i++) {
             arr[i] = num;
             num++;
-        }
-        for (int i = 0; i < arr.length; i++) {
             sum = sum * arr[i];
         }
         return sum;

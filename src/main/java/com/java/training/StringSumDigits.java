@@ -8,13 +8,13 @@ public class StringSumDigits {
      */
     public int sumDigits(String str) {
         String[] numbers = str.replaceAll("[^-?0-9]+", "").trim().split("");
+        if (numbers.length == 0 || numbers[0].equals("")) {
+            return 0;
+        }
         int arr[] = new int[numbers.length];
         int sum = 0;
         for (int i = 0; i < numbers.length; i++) {
             arr[i] = Integer.parseInt(numbers[i]);
-        }
-        if (arr.length == 0) {
-            return 0; // i dont understand how to correctly return 0, if there are no digits in the string.
         }
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
